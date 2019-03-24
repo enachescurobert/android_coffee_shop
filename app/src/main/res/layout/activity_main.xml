@@ -26,7 +26,7 @@
         android:text="@string/coffee_with_toppings"
         android:textAllCaps="true"
         android:textSize="23sp"
-        android:textColor="@color/colorPrimaryDark"/>
+        android:textColor="#795548"/>
 
     <TextView
         android:id="@+id/oreo_text_view"
@@ -48,8 +48,7 @@
 
         <Button
             android:id="@+id/decrement_oreo"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            style="@style/ButtonStyle"
             android:onClick="decrement_oreo_button"
             android:text="-" />
 
@@ -66,8 +65,7 @@
 
         <Button
             android:id="@+id/increment_oreo"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            style="@style/ButtonStyle"
             android:onClick="increment_oreo_button"
             android:text="+" />
     </LinearLayout>
@@ -92,8 +90,7 @@
 
         <Button
             android:id="@+id/decrement_kit_kat"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            style="@style/ButtonStyle"
             android:onClick="decrement_kit_kat_button"
             android:text="-" />
 
@@ -110,8 +107,7 @@
 
         <Button
             android:id="@+id/increment_kit_kat"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            style="@style/ButtonStyle"
             android:onClick="increment_kit_kat_button"
             android:text="+" />
     </LinearLayout>
@@ -136,8 +132,7 @@
 
         <Button
             android:id="@+id/decrement_both"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            style="@style/ButtonStyle"
             android:onClick="decrement_both_button"
             android:text="-" />
 
@@ -155,8 +150,7 @@
 
         <Button
             android:id="@+id/increment_both"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            style="@style/ButtonStyle"
             android:onClick="increment_both_button"
             android:text="+" />
     </LinearLayout>
@@ -170,12 +164,11 @@
         android:text="@string/simple_coffe_3"
         android:textAllCaps="true"
         android:textSize="23sp"
-        android:textColor="@color/colorPrimaryDark"/>
+        android:textColor="#795548"/>
 
     <Button
         android:id="@+id/decrement_button"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        style="@style/ButtonStyle"
         android:layout_below="@+id/quantity_view"
         android:onClick="decrement"
         android:text="-" />
@@ -196,8 +189,7 @@
 
     <Button
         android:id="@+id/increment_button"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        style="@style/ButtonStyle"
         android:layout_below="@+id/quantity_view"
         android:layout_toRightOf="@+id/quantity_text_view"
         android:onClick="increment"
@@ -212,7 +204,7 @@
         android:text="@string/total"
         android:textAllCaps="true"
         android:textSize="23sp"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="#795548"
         />
     />
 
