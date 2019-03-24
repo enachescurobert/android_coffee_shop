@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //initializing views with activity_mail.xml
+        //initializing views with activity_main.xml
         mCustomerName = findViewById(R.id.customerName);
         mPriceTextView = findViewById(R.id.price_text_view);
         mSendEmailBtn = findViewById(R.id.sendEmailBtn);
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                 String message = mPriceTextView.getText().toString().trim();
 
                 //method call for email intent with these inputs as parameters
-                sendEmail(recipient,subject, message);
+                sendEmail(recipient, subject, message);
 
             }
         });
@@ -78,12 +78,12 @@ public class MainActivity extends AppCompatActivity {
     private void sendEmail(String recipient, String subject, String message) {
         //Action_SEND action to launch an email client installed on our Android device
         Intent mEmailIntent = new Intent(Intent.ACTION_SEND);
-        //To send an email, we need to specify mailto: as URI using setData() method
+        //To send an email, we need to specify milto: as URI using setData() method
         //and data type will be to text/plain using setType() method
-        mEmailIntent.setData(Uri.parse("milto:"));
+        mEmailIntent.setData(Uri.parse("mailto:"));
         mEmailIntent.setType("text/plain");
         //put recipient email in intent
-        /* recipient is put as array because we mai want to send email to multiple emails so
+        /* recipient is put as array because we may want to send email to multiple emails so
         by using commas(,) separated emails, it will be stored in array
         */
         mEmailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{recipient});

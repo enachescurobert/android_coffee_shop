@@ -15,7 +15,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:ems="10"
-        android:hint="Enter name here"
+        android:hint="@string/enter_name_here"
         android:inputType="textNoSuggestions" />
 
     <TextView
@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/customerName"
-        android:text="Coffee With Toppings:"
+        android:text="@string/coffee_with_toppings"
         android:textAllCaps="true"
         android:textSize="23sp"
         android:textColor="@color/colorPrimaryDark"/>
@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/extraToppings"
-        android:text="Oreo: ($4)"
+        android:text="@string/oreo_4"
         android:textAllCaps="true"
         android:textSize="20sp" />
 
@@ -63,7 +63,6 @@
             android:text="0"
             android:textSize="23sp"
             android:textStyle="bold" />
-        />
 
         <Button
             android:id="@+id/increment_oreo"
@@ -78,7 +77,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/oreoTopping"
-        android:text="Kit Kat: ($4)"
+        android:text="@string/kit_kat_4"
         android:textAllCaps="true"
         android:textSize="19sp" />
 
@@ -123,7 +122,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/kitKatTopping"
-        android:text="Both Toppings: ($5)"
+        android:text="@string/both_toppings_5"
         android:textAllCaps="true"
         android:textSize="19sp" />
 
@@ -169,7 +168,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/bothTopping"
-        android:text="Simple Coffe: ($3)"
+        android:text="@string/simple_coffe_3"
         android:textAllCaps="true"
         android:textSize="23sp"
         android:textColor="@color/colorPrimaryDark"/>
@@ -211,7 +210,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/decrement_button"
-        android:text="Total:"
+        android:text="@string/total"
         android:textAllCaps="true"
         android:textSize="23sp"
         android:textColor="@color/colorPrimaryDark"
@@ -223,7 +222,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/price_view"
-        android:text="$0"
+        android:text="@string/_0"
         android:textSize="23sp"
         android:textStyle="bold" />
     />
@@ -240,7 +239,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="submitOrder"
-            android:text="Make Bill"
+            android:text="@string/make_bill"
             android:layout_marginRight="20dp"/>
 
         <Button
@@ -248,7 +247,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="sendOurOrderByMail"
-            android:text="Send Order"
+            android:text="@string/send_order"
             />
 
     </LinearLayout>

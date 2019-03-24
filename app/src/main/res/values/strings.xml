@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Robu\'s CoffeeShop</string>
+    <string name="send_order">Send Order</string>
+    <string name="make_bill">Make Bill</string>
+    <string name="_0">$0</string>
+    <string name="total">Total:</string>
+    <string name="simple_coffe_3">Simple Coffe: ($3)</string>
+    <string name="both_toppings_5">Both Toppings: ($5)</string>
+    <string name="kit_kat_4">Kit Kat: ($4)</string>
+    <string name="oreo_4">Oreo: ($4)</string>
+    <string name="coffee_with_toppings">Coffee With Toppings:</string>
+    <string name="enter_name_here">Enter name here</string>
 </resources>
