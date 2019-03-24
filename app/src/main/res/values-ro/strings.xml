@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Cafeneaua lui Robu</string>
+    <string name="send_order">Trimite Comandar</string>
+    <string name="make_bill">Nota de plata</string>
+    <string name="_0">$0</string>
+    <string name="total">Total:</string>
+    <string name="simple_coffe_3">Cafea simpla: (3 RON)</string>
+    <string name="both_toppings_5">Ambele topping-uri: (4 RON)</string>
+    <string name="kit_kat_4">Kit Kat: (4 RON)</string>
+    <string name="oreo_4">Oreo: (5 RON)</string>
+    <string name="coffee_with_toppings">Cafea cu topping-uri:</string>
+    <string name="enter_name_here">Introdu numele aici</string>
+</resources>
