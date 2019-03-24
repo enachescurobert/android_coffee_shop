@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
 
         try {
             //no error, so start intent
-            startActivity(Intent.createChooser(mEmailIntent,"Choose an Email Client"));
+            startActivity(Intent.createChooser(mEmailIntent, this.getResources().getString(R.string.choose_mail)));
         }
         catch (Exception e){
             //if anything goes wrong e.g no internet or email client
@@ -224,8 +224,10 @@ public class MainActivity extends AppCompatActivity {
         EditText editText = (EditText) findViewById(R.id.customerName);
         String nameOfTheCustomer = editText.getText().toString();
 
+        String text1 = String.valueOf(R.string.order_of);
+
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText("Order of Mr. " + nameOfTheCustomer + ":\n" + numberOfCoffees + " simple coffees, " + numberOfOreoCoffees+ " with Oreo, "+ numberOfKitKatCoffees + " with Kit Kat, " + numberOfToppingCoffees +" with both toppings."+"\n"+ "That would be: " + NumberFormat.getCurrencyInstance().format(number));
+        priceTextView.setText(this.getResources().getString(R.string.order_of) + nameOfTheCustomer + ":\n" + numberOfCoffees + this.getResources().getString(R.string.simple_coffees) + numberOfOreoCoffees+ this.getResources().getString(R.string.oreo_coffees) + numberOfKitKatCoffees + this.getResources().getString(R.string.kit_kat_coffees) + numberOfToppingCoffees + this.getResources().getString(R.string.both_coffees) +"\n"+ this.getResources().getString(R.string.how_much) + NumberFormat.getCurrencyInstance().format(number));
 
     }
 

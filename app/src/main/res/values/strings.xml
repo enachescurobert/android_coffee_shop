@@ -13,7 +13,12 @@
     <string name="intent_title">Choose an Email Client</string>
     <string name="over_15">Sorry, but you can\'t order more than 10 coffees for now! :(</string>
     <string name="under_0">Sorry, but you can\'t order -x coffees</string>
-    <string name="final_amount_string">That would be: </string>
-    <string name="order_of">Order of Mr./Ms.: </string>
-
+    <string name="final_amount_string">That would be:&#160;</string>
+    <string name="order_of">Order of Mr./Ms.:&#160;</string>
+    <string name="simple_coffees">&#160;simple coffees,&#160;</string>
+    <string name="oreo_coffees">&#160;with oreo,&#160;</string>
+    <string name="kit_kat_coffees">&#160;with kit kat,&#160;</string>
+    <string name="both_coffees">&#160;with both toppings.</string>
+    <string name="how_much">Total:&#160;</string>
+    <string name="choose_mail">Choose an Email Client</string>
 </resources>

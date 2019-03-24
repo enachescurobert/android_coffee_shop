@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Cafeneaua lui Robu</string>
-    <string name="send_order">Trimite Comandar</string>
+    <string name="send_order">Trimite Comanda</string>
     <string name="make_bill">Nota de plata</string>
-    <string name="_0">$0</string>
+    <string name="_0">0 RON</string>
     <string name="total">Total:</string>
     <string name="simple_coffe_3">Cafea simpla: (3 RON)</string>
     <string name="both_toppings_5">Ambele topping-uri: (4 RON)</string>
@@ -13,8 +13,13 @@
     <string name="intent_title">Alege o aplicatie de Email</string>
     <string name="over_15">Ne pare rau, dar nu puteti comanda mai mult de 15 cafele. :(</string>
     <string name="under_0">Ne pare rau, dar nu puteti comanda -x cafele.</string>
-    <string name="final_amount_string">Nota finala este de: </string>
-    <string name="order_of">Comanda Dl./Dn.: </string>
-
+    <string name="final_amount_string">Nota finala este de:&#160;</string>
+    <string name="order_of">Comanda Dl./Dn.:&#160;</string>
+    <string name="simple_coffees">&#160;cafele simple,&#160;</string>
+    <string name="oreo_coffees">&#160;cu oreo,&#160;</string>
+    <string name="kit_kat_coffees">&#160;cu kit kat,&#160;</string>
+    <string name="both_coffees">&#160;cu ambele topping-uri.</string>
+    <string name="how_much">Nota totala:&#160;</string>
+    <string name="choose_mail">Alege aplicatia de E-Mail</string>
 
 </resources>
