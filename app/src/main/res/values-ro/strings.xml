@@ -10,4 +10,11 @@
     <string name="oreo_4">Oreo: (5 RON)</string>
     <string name="coffee_with_toppings">Cafea cu topping-uri:</string>
     <string name="enter_name_here">Introdu numele aici</string>
+    <string name="intent_title">Alege o aplicatie de Email</string>
+    <string name="over_15">Ne pare rau, dar nu puteti comanda mai mult de 15 cafele. :(</string>
+    <string name="under_0">Ne pare rau, dar nu puteti comanda -x cafele.</string>
+    <string name="final_amount_string">Nota finala este de: </string>
+    <string name="order_of">Comanda Dl./Dn.: </string>
+
+
 </resources>

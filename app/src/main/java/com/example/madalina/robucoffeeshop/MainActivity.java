@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
             //displayPrice(numberOfCoffees * priceOfOneCoffe);
             ;
         } else {
-            Toast.makeText(this, "Sorry, but you can't order more than 10 coffees for now! :(", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.over_15, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
             //displayPrice(numberOfOreoCoffees * priceOfOreoCoffe);
             ;
         } else {
-            Toast.makeText(this, "Sorry, but you can't order more than 10 coffees for now! :(", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.over_15, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
             //displayPrice(numberOfKitKatCoffees * priceOfKitKatCoffe);
             ;
         } else {
-            Toast.makeText(this, "Sorry, but you can't order more than 10 coffees for now! :(", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.over_15, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -152,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
             //displayPrice(numberOfToppingCoffees * priceOfToppingCoffe);
             ;
         } else {
-            Toast.makeText(this, "Sorry, but you can't order more than 10 coffees for now! :(", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.over_15, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -162,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
             //displayPrice(numberOfCoffees * priceOfOneCoffe);
             ;
         } else {
-            Toast.makeText(this, "You can't order -x coffees. -.-", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.under_0, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -172,7 +172,7 @@ public class MainActivity extends AppCompatActivity {
             //displayPrice(numberOfOreoCoffees * priceOfOreoCoffe);
             ;
         } else {
-            Toast.makeText(this, "You can't order -x coffees. -.-", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.under_0, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -182,7 +182,7 @@ public class MainActivity extends AppCompatActivity {
             //displayPrice(numberOfKitKatCoffees * priceOfKitKatCoffe);
             ;
         } else {
-            Toast.makeText(this, "You can't order -x coffees. -.-", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.under_0, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -192,7 +192,7 @@ public class MainActivity extends AppCompatActivity {
             //displayPrice(numberOfToppingCoffees * numberOfToppingCoffees);
             ;
         } else {
-            Toast.makeText(this, "You can't order -x coffees. -.-", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.under_0, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -224,10 +224,8 @@ public class MainActivity extends AppCompatActivity {
         EditText editText = (EditText) findViewById(R.id.customerName);
         String nameOfTheCustomer = editText.getText().toString();
 
-        String intro = "That would be: ";
-
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText("Order of Mr. " + nameOfTheCustomer + ":\n" + numberOfCoffees + " simple coffees, " + numberOfOreoCoffees+ " with Oreo, "+ numberOfKitKatCoffees + " with Kit Kat, " + numberOfToppingCoffees +" with both toppings."+"\n"+ intro + NumberFormat.getCurrencyInstance().format(number));
+        priceTextView.setText("Order of Mr. " + nameOfTheCustomer + ":\n" + numberOfCoffees + " simple coffees, " + numberOfOreoCoffees+ " with Oreo, "+ numberOfKitKatCoffees + " with Kit Kat, " + numberOfToppingCoffees +" with both toppings."+"\n"+ "That would be: " + NumberFormat.getCurrencyInstance().format(number));
 
     }
 

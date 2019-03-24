@@ -107,7 +107,6 @@
             android:text="0"
             android:textSize="23sp"
             android:textStyle="bold" />
-        />
 
         <Button
             android:id="@+id/increment_kit_kat"
