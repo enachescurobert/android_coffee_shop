@@ -1,4 +1,4 @@
-package com.example.madalina.robucoffeeshop;
+package com.example.enachescurobert.robucoffeeshop;
 /**
  * IMPORTANT: Make sure you are using the correct package name.
  * This example uses the package name:

@@ -1,4 +1,4 @@
-package com.example.madalina.robucoffeeshop;
+package com.example.enachescurobert.robucoffeeshop;
 
 import org.junit.Test;
 
