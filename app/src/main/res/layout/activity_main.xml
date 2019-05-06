@@ -163,7 +163,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/bothTopping"
-            android:text="@string/simple_coffe_3"
+            android:text="@string/simple_coffee_3"
             android:textAllCaps="true"
             android:textColor="#795548"
             android:textSize="23sp" />

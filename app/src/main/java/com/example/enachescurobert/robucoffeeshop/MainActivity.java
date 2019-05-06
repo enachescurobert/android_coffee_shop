@@ -1,11 +1,5 @@
 package com.example.enachescurobert.robucoffeeshop;
-/**
- * IMPORTANT: Make sure you are using the correct package name.
- * This example uses the package name:
- * package com.example.android.justjava
- * If you get an error when copying this code into Android studio, update it to match teh package name found
- * in the project's AndroidManifest.xml file.
- **/
+
 
 import android.content.Intent;
 import android.net.Uri;
@@ -13,41 +7,31 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.NumberFormat;
 
-/**
- * This app displays an order form to order coffee.
- */
+
 public class MainActivity extends AppCompatActivity {
 
     public int numberOfCoffees = 0;
-    public int priceOfOneCoffe = 3;
+    public int priceOfOneCoffee = 3;
 
     public int numberOfOreoCoffees = 0;
-    public int priceOfOreoCoffe = 4;
+    public int priceOfOreoCoffee = 4;
 
     public int numberOfKitKatCoffees = 0;
-    public int priceOfKitKatCoffe = 4;
+    public int priceOfKitKatCoffee = 4;
 
     public int numberOfToppingCoffees = 0;
-    public int priceOfToppingCoffe = 5;
+    public int priceOfToppingCoffee = 5;
 
     EditText mCustomerName;
     TextView mPriceTextView;
     Button mSendEmailBtn;
 
-
-    //Button sendEmailBtn;
-
-    /*
-    public boolean oreoAdded;
-    public boolean kitKatAdded;
-    */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        displayPrice(numberOfCoffees * priceOfOneCoffe + numberOfOreoCoffees * priceOfOreoCoffe + numberOfKitKatCoffees * priceOfKitKatCoffe + numberOfToppingCoffees * priceOfToppingCoffe);
+        displayPrice(numberOfCoffees * priceOfOneCoffee + numberOfOreoCoffees * priceOfOreoCoffee + numberOfKitKatCoffees * priceOfKitKatCoffee + numberOfToppingCoffees * priceOfToppingCoffee);
     }
 
 
@@ -119,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
     public void increment(View view) {
         if (numberOfCoffees < 15) {
             display(++numberOfCoffees);
-            //displayPrice(numberOfCoffees * priceOfOneCoffe);
+            //displayPrice(numberOfCoffees * priceOfOneCoffee);
             ;
         } else {
             Toast.makeText(this, R.string.over_15, Toast.LENGTH_SHORT).show();
@@ -129,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
     public void increment_oreo_button(View view) {
         if (numberOfOreoCoffees < 15) {
             displayOreo(++numberOfOreoCoffees);
-            //displayPrice(numberOfOreoCoffees * priceOfOreoCoffe);
+            //displayPrice(numberOfOreoCoffees * priceOfOreoCoffee);
             ;
         } else {
             Toast.makeText(this, R.string.over_15, Toast.LENGTH_SHORT).show();
@@ -139,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
     public void increment_kit_kat_button(View view) {
         if (numberOfKitKatCoffees < 15) {
             displayKitKat(++numberOfKitKatCoffees);
-            //displayPrice(numberOfKitKatCoffees * priceOfKitKatCoffe);
+            //displayPrice(numberOfKitKatCoffees * priceOfKitKatCoffee);
             ;
         } else {
             Toast.makeText(this, R.string.over_15, Toast.LENGTH_SHORT).show();
@@ -149,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
     public void increment_both_button(View view) {
         if (numberOfToppingCoffees < 15) {
             displayTopping(++numberOfToppingCoffees);
-            //displayPrice(numberOfToppingCoffees * priceOfToppingCoffe);
+            //displayPrice(numberOfToppingCoffees * priceOfToppingCoffee);
             ;
         } else {
             Toast.makeText(this, R.string.over_15, Toast.LENGTH_SHORT).show();
@@ -159,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
     public void decrement(View view) {
         if (numberOfCoffees > 0) {
             display(--numberOfCoffees);
-            //displayPrice(numberOfCoffees * priceOfOneCoffe);
+            //displayPrice(numberOfCoffees * priceOfOneCoffee);
             ;
         } else {
             Toast.makeText(this, R.string.under_0, Toast.LENGTH_SHORT).show();
@@ -169,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
     public void decrement_oreo_button(View view) {
         if (numberOfOreoCoffees > 0) {
             displayOreo(--numberOfOreoCoffees);
-            //displayPrice(numberOfOreoCoffees * priceOfOreoCoffe);
+            //displayPrice(numberOfOreoCoffees * priceOfOreoCoffee);
             ;
         } else {
             Toast.makeText(this, R.string.under_0, Toast.LENGTH_SHORT).show();
@@ -179,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
     public void decrement_kit_kat_button(View view) {
         if (numberOfKitKatCoffees > 0) {
             displayKitKat(--numberOfKitKatCoffees);
-            //displayPrice(numberOfKitKatCoffees * priceOfKitKatCoffe);
+            //displayPrice(numberOfKitKatCoffees * priceOfKitKatCoffee);
             ;
         } else {
             Toast.makeText(this, R.string.under_0, Toast.LENGTH_SHORT).show();
