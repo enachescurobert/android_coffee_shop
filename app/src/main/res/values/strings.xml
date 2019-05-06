@@ -25,7 +25,10 @@
     <string name="next">Next</string>
     <string name="skip">Skip</string>
     <string name="welcome_message">Welcome!</string>
-    <string name="shop_description">We want to give you a short walkthrough in order to make the undestanding of the app just a little easier. All you have to do to order the best coffee in town is covered in the following 4 steps:</string>
+    <string name="shop_description">We want to give you a short walkthrough in order to make the undestanding of the app just a little easier. All you have to do to order the best coffee in town is covered in the following 4 steps. You just need to:</string>
     <string name="coffee">coffee</string>
     <string name="opening">opening</string>
+    <string name="choose_products">Choose what you want</string>
+    <string name="make_your_bill">Ask for the bill</string>
+    <string name="send_the_order">Send us your order via e-mail</string>
 </resources>
