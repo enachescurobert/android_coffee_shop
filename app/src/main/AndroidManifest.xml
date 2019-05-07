@@ -10,8 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <!--android:hardwareAccelerated="false"-->
-        <!--android:largeHeap="true"-->
+        android:hardwareAccelerated="false"
+        android:largeHeap="true"
 
         <activity android:name=".WelcomeActivity"
             android:configChanges="orientation"
