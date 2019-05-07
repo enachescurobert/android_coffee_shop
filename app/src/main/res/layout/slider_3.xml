@@ -64,7 +64,7 @@
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/step_2"
+        android:src="@drawable/second_page"
         tools:ignore="ContentDescription"
         tools:layout_editor_absoluteX="53dp"
         tools:layout_editor_absoluteY="0dp" />
