@@ -22,10 +22,13 @@
     <string name="how_much">Nota totala:&#160;</string>
     <string name="choose_mail">Alege aplicatia de E-Mail</string>
     <string name="coffee">cafea</string>
-    <string name="next">Urmatorul</string>
+    <string name="next">Next</string>
     <string name="opening">deschide</string>
-    <string name="shop_description">Ne dorim să vă facem o scurtă introducere pentru a înțelege cum puteți utiliza aplicația noastră. Tot ce aveți de făcut pentru a comanda cele mai bune cafele este descris în cei 4 pași care urmează. Trebuie doar să:</string>
+    <string name="shop_description">Ne dorim să vă facem o scurtă introducere pentru a înțelege cum puteți utiliza aplicația noastră. Tot ce aveți de făcut pentru a comanda cele mai bune cafele este descris în cei 4 pași care urmează:</string>
     <string name="skip">Sari peste</string>
     <string name="welcome_message">Bine ai venit!</string>
+    <string name="choose_products">Alege ce vrei</string>
+    <string name="make_your_bill">Cere nota</string>
+    <string name="send_the_order">Trimite-ne comanda</string>
 
 </resources>
