@@ -4,7 +4,7 @@
     <string name="make_bill">Make Bill</string>
     <string name="_0">$0</string>
     <string name="total">Total:</string>
-    <string name="simple_coffe_3">Simple Coffe: ($3)</string>
+    <string name="simple_coffee_3">Simple Coffee: ($3)</string>
     <string name="both_toppings_5">Both Toppings: ($5)</string>
     <string name="kit_kat_4">Kit Kat: ($4)</string>
     <string name="oreo_4">Oreo: ($4)</string>
@@ -21,4 +21,14 @@
     <string name="both_coffees">&#160;with both toppings.</string>
     <string name="how_much">Total:&#160;</string>
     <string name="choose_mail">Choose an Email Client</string>
+
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="welcome_message">Welcome!</string>
+    <string name="shop_description">We want to give you a short walkthrough in order to make the undestanding of the app just a little easier. All you have to do to order the best coffee in town is covered in the following 4 steps. You just need to:</string>
+    <string name="coffee">coffee</string>
+    <string name="opening">opening</string>
+    <string name="choose_products">Choose what you want</string>
+    <string name="make_your_bill">Ask for the bill</string>
+    <string name="send_the_order">Send us your order via e-mail</string>
 </resources>

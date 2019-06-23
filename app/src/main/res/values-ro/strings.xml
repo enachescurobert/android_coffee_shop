@@ -4,7 +4,7 @@
     <string name="make_bill">Nota de plata</string>
     <string name="_0">0 RON</string>
     <string name="total">Total:</string>
-    <string name="simple_coffe_3">Cafea simpla: (3 RON)</string>
+    <string name="simple_coffee_3">Cafea simpla: (3 RON)</string>
     <string name="both_toppings_5">Ambele topping-uri: (4 RON)</string>
     <string name="kit_kat_4">Kit Kat: (4 RON)</string>
     <string name="oreo_4">Oreo: (5 RON)</string>
@@ -21,5 +21,14 @@
     <string name="both_coffees">&#160;cu ambele topping-uri.</string>
     <string name="how_much">Nota totala:&#160;</string>
     <string name="choose_mail">Alege aplicatia de E-Mail</string>
+    <string name="coffee">cafea</string>
+    <string name="next">Next</string>
+    <string name="opening">deschide</string>
+    <string name="shop_description">Ne dorim să vă facem o scurtă introducere pentru a înțelege cum puteți utiliza aplicația noastră. Tot ce aveți de făcut pentru a comanda cele mai bune cafele este descris în cei 4 pași care urmează:</string>
+    <string name="skip">Sari peste</string>
+    <string name="welcome_message">Bine ai venit!</string>
+    <string name="choose_products">Alege ce vrei</string>
+    <string name="make_your_bill">Cere nota</string>
+    <string name="send_the_order">Trimite-ne comanda</string>
 
 </resources>

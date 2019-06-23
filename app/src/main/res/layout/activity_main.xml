@@ -4,13 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg">
+    android:background="#F3F1F1"
+    >
+    <!--android:background="@drawable/bg"-->
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
+
 
         <EditText
             android:id="@+id/customerName"
@@ -149,7 +152,6 @@
                 android:textSize="23sp"
                 android:textStyle="bold" />
             />
-
             <Button
                 android:id="@+id/increment_both"
                 style="@style/ButtonStyle"
@@ -163,7 +165,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/bothTopping"
-            android:text="@string/simple_coffe_3"
+            android:text="@string/simple_coffee_3"
             android:textAllCaps="true"
             android:textColor="#795548"
             android:textSize="23sp" />
