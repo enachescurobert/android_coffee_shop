@@ -4,16 +4,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/bg">
-    <!--android:background="#795548"-->
+    android:background="@drawable/background">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
         android:background="#ffffff"
         android:gravity="center"
         android:text="@string/welcome_message"
@@ -24,14 +19,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:layout_width="326dp"
-        android:layout_height="78dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
         android:gravity="center"
         android:text="@string/shop_description"
         android:textColor="#795548"
@@ -42,31 +33,14 @@
         app:layout_constraintVertical_bias="0.723" />
 
     <ImageView
-        android:layout_width="359dp"
-        android:layout_height="180dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:contentDescription="@string/coffee"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.274"
+        app:layout_constraintVertical_bias="0.150"
         android:src="@mipmap/ic_logo"/>
-
-    <!--<ImageView-->
-        <!--style="@style/BackGroundImageView"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:layout_alignParentTop="true"-->
-        <!--android:layout_centerHorizontal="true"-->
-        <!--android:layout_marginTop="0dp"-->
-        <!--tools:ignore="ContentDescription"-->
-        <!--android:src="@drawable/first"-->
-    <!--/>-->
 
 </android.support.constraint.ConstraintLayout>

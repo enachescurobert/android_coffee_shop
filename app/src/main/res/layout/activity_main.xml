@@ -4,27 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F3F1F1"
-    >
-    <!--android:background="@drawable/bg"-->
+    android:background="#F3F1F1">
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity">
-
+        android:layout_height="wrap_content"
+        tools:context=".ui.MainActivity">
 
         <EditText
             android:id="@+id/customerName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:ems="10"
             android:hint="@string/enter_name_here"
-            android:inputType="textNoSuggestions" />
+            android:inputType="textNoSuggestions"
+            android:importantForAutofill="no" />
 
         <TextView
             android:id="@+id/extraToppings"
@@ -54,13 +51,13 @@
 
 
             <Button
-                android:id="@+id/decrement_oreo"
+                android:id="@+id/decrementOreoCoffeeBtn"
                 style="@style/ButtonStyle"
-                android:onClick="decrement_oreo_button"
-                android:text="-" />
+                android:text="-"
+                tools:ignore="HardcodedText" />
 
             <TextView
-                android:id="@+id/oreo_total"
+                android:id="@+id/oreoTotal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="8dp"
@@ -68,13 +65,14 @@
                 android:paddingRight="8dp"
                 android:text="0"
                 android:textSize="23sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
 
             <Button
-                android:id="@+id/increment_oreo"
+                android:id="@+id/incrementOreoCoffeeBtn"
                 style="@style/ButtonStyle"
-                android:onClick="increment_oreo_button"
-                android:text="+" />
+                android:text="+"
+                tools:ignore="HardcodedText" />
         </LinearLayout>
 
         <TextView
@@ -95,13 +93,13 @@
 
 
             <Button
-                android:id="@+id/decrement_kit_kat"
+                android:id="@+id/decrementKitKatCoffeeBtn"
                 style="@style/ButtonStyle"
-                android:onClick="decrement_kit_kat_button"
-                android:text="-" />
+                android:text="-"
+                tools:ignore="HardcodedText" />
 
             <TextView
-                android:id="@+id/kit_kat_total"
+                android:id="@+id/kitKatTotal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="8dp"
@@ -109,13 +107,14 @@
                 android:paddingRight="8dp"
                 android:text="0"
                 android:textSize="23sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
 
             <Button
-                android:id="@+id/increment_kit_kat"
+                android:id="@+id/incrementKitKatCoffeeBtn"
                 style="@style/ButtonStyle"
-                android:onClick="increment_kit_kat_button"
-                android:text="+" />
+                android:text="+"
+                tools:ignore="HardcodedText" />
         </LinearLayout>
 
         <TextView
@@ -136,13 +135,13 @@
 
 
             <Button
-                android:id="@+id/decrement_both"
+                android:id="@+id/decrementToppingCoffeeBtn"
                 style="@style/ButtonStyle"
-                android:onClick="decrement_both_button"
-                android:text="-" />
+                android:text="-"
+                tools:ignore="HardcodedText" />
 
             <TextView
-                android:id="@+id/both_total"
+                android:id="@+id/toppingTotal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="8dp"
@@ -150,13 +149,14 @@
                 android:paddingRight="8dp"
                 android:text="0"
                 android:textSize="23sp"
-                android:textStyle="bold" />
-            />
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
             <Button
-                android:id="@+id/increment_both"
+                android:id="@+id/incrementToppingCoffeeBtn"
                 style="@style/ButtonStyle"
-                android:onClick="increment_both_button"
-                android:text="+" />
+                android:text="+"
+                tools:ignore="HardcodedText" />
         </LinearLayout>
 
 
@@ -171,45 +171,44 @@
             android:textSize="23sp" />
 
         <Button
-            android:id="@+id/decrement_button"
+            android:id="@+id/decrementSimpleCoffeeBtn"
             style="@style/ButtonStyle"
             android:layout_below="@+id/quantity_view"
-            android:onClick="decrement"
-            android:text="-" />
+            android:text="-"
+            tools:ignore="HardcodedText" />
 
         <TextView
-            android:id="@+id/quantity_text_view"
+            android:id="@+id/simpleTotal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/quantity_view"
-            android:layout_toRightOf="@+id/decrement_button"
+            android:layout_toEndOf="@+id/decrementSimpleCoffeeBtn"
             android:paddingLeft="8dp"
             android:paddingTop="8dp"
             android:paddingRight="8dp"
             android:text="0"
             android:textSize="23sp"
-            android:textStyle="bold" />
-        />
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
 
         <Button
-            android:id="@+id/increment_button"
+            android:id="@+id/incrementSimpleCoffeeBtn"
             style="@style/ButtonStyle"
             android:layout_below="@+id/quantity_view"
-            android:layout_toRightOf="@+id/quantity_text_view"
-            android:onClick="increment"
-            android:text="+" />
+            android:layout_toEndOf="@+id/simpleTotal"
+            android:text="+"
+            tools:ignore="HardcodedText" />
 
 
         <TextView
             android:id="@+id/price_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/decrement_button"
+            android:layout_below="@+id/decrementSimpleCoffeeBtn"
             android:text="@string/total"
             android:textAllCaps="true"
             android:textColor="#795548"
             android:textSize="23sp" />
-        />
 
         <TextView
             android:id="@+id/price_text_view"
@@ -219,7 +218,6 @@
             android:text="@string/_0"
             android:textSize="23sp"
             android:textStyle="bold" />
-        />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -228,19 +226,19 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/order_button"
+                android:id="@+id/makeBillBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
-                android:onClick="submitOrder"
-                android:text="@string/make_bill" />
+                android:layout_marginEnd="20dp"
+                android:text="@string/make_bill"
+                tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/sendEmailBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="sendOurOrderByMail"
-                android:text="@string/send_order" />
+                android:text="@string/send_order"
+                tools:ignore="ButtonStyle" />
 
         </LinearLayout>
 

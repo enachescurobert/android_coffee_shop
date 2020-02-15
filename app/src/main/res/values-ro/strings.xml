@@ -15,6 +15,7 @@
     <string name="under_0">Ne pare rau, dar nu puteti comanda -x cafele.</string>
     <string name="final_amount_string">Nota finala este de:&#160;</string>
     <string name="order_of">Comanda Dl./Dn.:&#160;</string>
+    <string name="order">Comanda nouă</string>
     <string name="simple_coffees">&#160;cafele simple,&#160;</string>
     <string name="oreo_coffees">&#160;cu oreo,&#160;</string>
     <string name="kit_kat_coffees">&#160;cu kit kat,&#160;</string>

@@ -1,30 +1,29 @@
-package com.robert.enachescurobert.robucoffeeshop;
+package com.robert.enachescurobert.robucoffeeshop.ui;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.robert.enachescurobert.robucoffeeshop.R;
+import com.robert.enachescurobert.robucoffeeshop.adapters.MyPagerAdapter;
 
 public class WelcomeActivity extends AppCompatActivity {
 
     private ViewPager viewPager;
     private LinearLayout layoutDot;
-    private TextView[]dotstv;
-    private int[]layouts;
+    private int[] layouts;
     private Button btnSkip;
     private Button btnNext;
-    private MyPagerAdapter pagerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +47,6 @@ public class WelcomeActivity extends AppCompatActivity {
         btnSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 startMainActivity();
             }
         });
@@ -66,7 +64,7 @@ public class WelcomeActivity extends AppCompatActivity {
             }
         });
         layouts = new int[]{R.layout.slider_0,R.layout.slider_1,R.layout.slider_2, R.layout.slider_3, R.layout.slider_4};
-        pagerAdapter = new MyPagerAdapter(layouts,getApplicationContext());
+        MyPagerAdapter pagerAdapter = new MyPagerAdapter(layouts, getApplicationContext());
         viewPager.setAdapter(pagerAdapter);
 
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -75,6 +73,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
             }
 
+            @SuppressLint("SetTextI18n")
             @Override
             public void onPageSelected(int position) {
                 if(position == layouts.length-1){
@@ -105,12 +104,12 @@ public class WelcomeActivity extends AppCompatActivity {
         SharedPreferences ref = getApplicationContext().getSharedPreferences("IntroSliderApp", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = ref.edit();
         editor.putBoolean("FirstTimeStartFlag", stt);
-        editor.commit();
+        editor.apply();
     }
 
     private void setDotStatus(int page){
         layoutDot.removeAllViews();
-        dotstv =new TextView[layouts.length];
+        TextView[] dotstv = new TextView[layouts.length];
         for (int i = 0; i < dotstv.length; i++) {
             dotstv[i] = new TextView(this);
             dotstv[i].setText(Html.fromHtml("&#8226;"));
@@ -131,11 +130,11 @@ public class WelcomeActivity extends AppCompatActivity {
     private void setStatusBarTransparent(){
 
         //Remove title bar
-        getSupportActionBar().hide(); //<< this
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
 
         //Remove notification bar
 //        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-
     }
 }
