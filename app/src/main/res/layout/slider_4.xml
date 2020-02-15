@@ -69,28 +69,10 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="16dp" />
 
-    <ImageView
-        android:layout_width="312dp"
-        android:layout_height="351dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="8dp"
-        android:rotation="280"
-        android:src="@drawable/arrow"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.846"
-        tools:ignore="MissingConstraints" />
-
     <TextView
         android:layout_width="273dp"
         android:layout_height="110dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="casual"
+        app:fontFamily="casual"
         android:gravity="center"
         android:text="@string/send_the_order"
         android:textColor="#DF9057"
@@ -100,7 +82,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.297"
+        app:layout_constraintVertical_bias="0.277"
         tools:ignore="MissingConstraints" />
 
 </android.support.constraint.ConstraintLayout>
