@@ -260,17 +260,17 @@ public class MainActivity extends AppCompatActivity {
                 numberOfKitKatCoffees == 0 &&
                 numberOfToppingCoffees == 0) {
             Toast.makeText(getApplicationContext(),
-                    "You must add at least one coffee to order.",
+                    getString(R.string.add_coffee),
                     Toast.LENGTH_SHORT).show();
             viable = false;
         } else if (customerName.getText().toString().trim().equals("")) {
             Toast.makeText(getApplicationContext(),
-                    "You must tell us your name to order.",
+                    getString(R.string.add_name),
                     Toast.LENGTH_SHORT).show();
             viable =  false;
         } else if (address.getText().toString().trim().equals("")) {
             Toast.makeText(getApplicationContext(),
-                    "You must tell us your address to order.",
+                    getString(R.string.add_address),
                     Toast.LENGTH_SHORT).show();
             viable = false;
         }
@@ -293,15 +293,14 @@ public class MainActivity extends AppCompatActivity {
                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid) {
-                            Log.d(TAG, "onSuccess: It worked!");
-                            showSendEmailAlert("Request done.", "Do you want to send us an email too?");
+                            showSendEmailAlert(getString(R.string.request_done), getString(R.string.email_too));
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
                             Log.d(TAG, "onSuccess: It failed! Error: " + e.getLocalizedMessage());
-                            showSendEmailAlert("Request failed.", "Do you want to send us your order by email instead?");
+                            showSendEmailAlert(getString(R.string.request_failed), getString(R.string.email_instead));
                         }
                     });
         }
@@ -309,16 +308,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void showOrderToBeSentAlert(){
         AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
-        alertDialog.setTitle("One more step: ");
-        alertDialog.setMessage("Complete the order?");
-        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Yes",
+        alertDialog.setTitle(getString(R.string.one_more_step));
+        alertDialog.setMessage(getString(R.string.complete_the_order));
+        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.confirm_text),
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         writeNewOrderToFirebase();
                         dialog.dismiss();
                     }
                 });
-        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "No",
+        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.no_text),
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
@@ -332,7 +331,7 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
         alertDialog.setTitle(title);
         alertDialog.setMessage(message);
-        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Yes",
+        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.confirm_text),
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
 
@@ -347,7 +346,7 @@ public class MainActivity extends AppCompatActivity {
                         dialog.dismiss();
                     }
                 });
-        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "No",
+        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.no_text),
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
