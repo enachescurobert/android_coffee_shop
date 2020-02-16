@@ -24,7 +24,8 @@ public class MainActivity extends AppCompatActivity {
         TOPPING
     }
 
-    EditText mCustomerName;
+    EditText customerName;
+    EditText address;
     TextView mPriceTextView;
     TextView simpleTotal;
     TextView oreoTotal;
@@ -54,7 +55,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //initializing views with activity_main.xml
-        mCustomerName = findViewById(R.id.customerName);
+        customerName = findViewById(R.id.customerName);
+        address = findViewById(R.id.address);
         mPriceTextView = findViewById(R.id.price_text_view);
         makeBillBtn = findViewById(R.id.makeBillBtn);
         sendEmailBtn = findViewById(R.id.sendEmailBtn);
@@ -70,15 +72,6 @@ public class MainActivity extends AppCompatActivity {
         decrementOreoCoffeeBtn = findViewById(R.id.decrementOreoCoffeeBtn);
         decrementKitKatCoffeeBtn = findViewById(R.id.decrementKitKatCoffeeBtn);
         decrementToppingCoffeeBtn = findViewById(R.id.decrementToppingCoffeeBtn);
-
-        incrementSimpleCoffeeBtn.setOnClickListener(amountOfCoffeesCallback);
-        incrementOreoCoffeeBtn.setOnClickListener(amountOfCoffeesCallback);
-        incrementKitKatCoffeeBtn.setOnClickListener(amountOfCoffeesCallback);
-        incrementToppingCoffeeBtn.setOnClickListener(amountOfCoffeesCallback);
-        decrementSimpleCoffeeBtn.setOnClickListener(amountOfCoffeesCallback);
-        decrementOreoCoffeeBtn.setOnClickListener(amountOfCoffeesCallback);
-        decrementKitKatCoffeeBtn.setOnClickListener(amountOfCoffeesCallback);
-        decrementToppingCoffeeBtn.setOnClickListener(amountOfCoffeesCallback);
 
         amountOfCoffeesCallback = new View.OnClickListener() {
 
@@ -113,16 +106,26 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
+        incrementSimpleCoffeeBtn.setOnClickListener(amountOfCoffeesCallback);
+        incrementOreoCoffeeBtn.setOnClickListener(amountOfCoffeesCallback);
+        incrementKitKatCoffeeBtn.setOnClickListener(amountOfCoffeesCallback);
+        incrementToppingCoffeeBtn.setOnClickListener(amountOfCoffeesCallback);
+        decrementSimpleCoffeeBtn.setOnClickListener(amountOfCoffeesCallback);
+        decrementOreoCoffeeBtn.setOnClickListener(amountOfCoffeesCallback);
+        decrementKitKatCoffeeBtn.setOnClickListener(amountOfCoffeesCallback);
+        decrementToppingCoffeeBtn.setOnClickListener(amountOfCoffeesCallback);
+
         makeBillBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                int priceOfOneCoffee = 3;
-                int priceOfOreoCoffee = 4;
-                int priceOfKitKatCoffee = 4;
-                int priceOfToppingCoffee = 5;
+                if (orderIsNotViable()){
+                    return;
+                }
 
-                displayPrice(numberOfSimpleCoffees * priceOfOneCoffee + numberOfOreoCoffees * priceOfOreoCoffee + numberOfKitKatCoffees * priceOfKitKatCoffee + numberOfToppingCoffees * priceOfToppingCoffee);
+                displayPrice();
+
+                sendEmailBtn.setEnabled(true);
             }
         });
 
@@ -130,10 +133,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String subject = mCustomerName.getText().toString().equals("") ?
+                if (orderIsNotViable()){
+                    sendEmailBtn.setEnabled(false);
+                    mPriceTextView.setText("");
+                    return;
+                }
+
+                displayPrice();
+
+                String subject = customerName.getText().toString().equals("") ?
                         getResources().getString(R.string.order) :
                         getResources().getString(R.string.order_of) +
-                                mCustomerName.getText().toString().trim();
+                                customerName.getText().toString().trim();
                 String message = mPriceTextView.getText().toString().trim();
 
                 sendEmail(subject, message);
@@ -167,8 +178,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
             if (currentValue > 0) {
                 return --currentValue;
-            } else {
-                Toast.makeText(getApplicationContext(), R.string.under_0, Toast.LENGTH_SHORT).show();
             }
         }
         return currentValue;
@@ -196,21 +205,64 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void displayPrice(int number) {
+    private void displayPrice() {
 
-        EditText editText = findViewById(R.id.customerName);
-        String nameOfTheCustomer = editText.getText().toString();
+        int priceOfOneCoffee = 3;
+        int priceOfOreoCoffee = 4;
+        int priceOfKitKatCoffee = 4;
+        int priceOfToppingCoffee = 5;
 
-        TextView priceTextView = findViewById(R.id.price_text_view);
-        String textToShow = this.getResources().getString(R.string.order_of) + nameOfTheCustomer + ":\n" +
-                numberOfSimpleCoffees + this.getResources().getString(R.string.simple_coffees) +
-                numberOfOreoCoffees + this.getResources().getString(R.string.oreo_coffees) +
-                numberOfKitKatCoffees + this.getResources().getString(R.string.kit_kat_coffees) +
-                numberOfToppingCoffees + this.getResources().getString(R.string.both_coffees) + "\n" +
-                this.getResources().getString(R.string.how_much) +
-                NumberFormat.getCurrencyInstance().format(number);
+        int total = numberOfSimpleCoffees * priceOfOneCoffee + numberOfOreoCoffees * priceOfOreoCoffee + numberOfKitKatCoffees * priceOfKitKatCoffee + numberOfToppingCoffees * priceOfToppingCoffee;
 
-        priceTextView.setText(textToShow);
+        String addressOfTheCustomer = address.getText().toString();
+
+        StringBuilder textToShow = new StringBuilder();
+        textToShow.append("Selected Cofees:");
+        if (numberOfSimpleCoffees > 0 ) {
+            textToShow.append("\n-");
+            textToShow.append(numberOfSimpleCoffees == 1 ?
+                    numberOfSimpleCoffees + " " + this.getResources().getString(R.string.simple_coffee) :
+                    numberOfSimpleCoffees + " " + this.getResources().getString(R.string.simple_coffees));
+        }
+        textToShow.append(numberOfOreoCoffees > 0 ? "\n-" + numberOfOreoCoffees + " " + this.getResources().getString(R.string.oreo_coffees) : "");
+        textToShow.append(numberOfKitKatCoffees > 0 ? "\n-" + numberOfKitKatCoffees + " " + this.getResources().getString(R.string.kit_kat_coffees) : "");
+        textToShow.append(numberOfToppingCoffees > 0 ? "\n-" + numberOfToppingCoffees + " " + this.getResources().getString(R.string.both_coffees) : "");
+        textToShow.append("\n\n")
+                .append(this.getResources().getString(R.string.how_much))
+                .append("\n")
+                .append(NumberFormat.getCurrencyInstance().format(total))
+                .append("\n\n")
+                .append(getString(R.string.deliver_at_address))
+                .append("\n")
+                .append(addressOfTheCustomer);
+
+        mPriceTextView.setText(textToShow);
+    }
+
+    private boolean orderIsNotViable() {
+
+        boolean viable = true;
+
+        if (numberOfSimpleCoffees == 0 &&
+                numberOfOreoCoffees == 0 &&
+                numberOfKitKatCoffees == 0 &&
+                numberOfToppingCoffees == 0) {
+            Toast.makeText(getApplicationContext(),
+                    "You must add at least one coffee to order.",
+                    Toast.LENGTH_SHORT).show();
+            viable = false;
+        } else if (customerName.getText().toString().trim().equals("")) {
+            Toast.makeText(getApplicationContext(),
+                    "You must tell us your name to order.",
+                    Toast.LENGTH_SHORT).show();
+            viable =  false;
+        } else if (address.getText().toString().trim().equals("")) {
+            Toast.makeText(getApplicationContext(),
+                    "You must tell us your address to order.",
+                    Toast.LENGTH_SHORT).show();
+            viable = false;
+        }
+        return !viable;
     }
 
 }
