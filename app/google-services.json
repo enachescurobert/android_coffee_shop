@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1049722343135",
+    "firebase_url": "https://robu-s-coffee-shop.firebaseio.com",
+    "project_id": "robu-s-coffee-shop",
+    "storage_bucket": "robu-s-coffee-shop.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1049722343135:android:bce5d30cd4c587f291a36a",
+        "android_client_info": {
+          "package_name": "com.robert.enachescurobert.robucoffeeshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1049722343135-1gou1hk342p2n4ggk6gpdcrro3n52ot5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1dEjz66MGCmUH5IqE68Jiis86UOW84Mc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1049722343135-1gou1hk342p2n4ggk6gpdcrro3n52ot5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
