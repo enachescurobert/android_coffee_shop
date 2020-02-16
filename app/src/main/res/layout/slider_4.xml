@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/third"
+        android:src="@drawable/fourth"
         tools:ignore="ContentDescription"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="16dp" />
@@ -20,17 +20,17 @@
     <TextView
         android:layout_width="273dp"
         android:layout_height="110dp"
-        app:fontFamily="casual"
+        android:background="@android:color/darker_gray"
         android:gravity="center"
         android:text="@string/send_the_order"
-        android:textColor="#DF9057"
-        android:textSize="30sp"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        app:fontFamily="casual"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.277"
+        app:layout_constraintVertical_bias="0.811"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

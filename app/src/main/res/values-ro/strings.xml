@@ -15,7 +15,7 @@
     <string name="over_15">Ne pare rau, dar nu puteti comanda mai mult de 15 cafele. :(</string>
     <string name="under_0">Ne pare rau, dar nu puteti comanda -x cafele.</string>
     <string name="final_amount_string">Nota finala este de:&#160;</string>
-    <string name="order_of">Comanda Dl./Dn.:&#160;</string>
+    <string name="order_of">Comanda de la:&#160;</string>
     <string name="order">Comanda nouă</string>
     <string name="simple_coffees">simple,</string>
     <string name="simple_coffee">simpla</string>
@@ -32,7 +32,7 @@
     <string name="welcome_message">Bine ai venit!</string>
     <string name="choose_products">Alege ce vrei</string>
     <string name="make_your_bill">Cere nota</string>
-    <string name="send_the_order">Trimite-ne comanda</string>
+    <string name="send_the_order">Apasa pe Trimite comanda si confirma cererea</string>
     <string name="we_ll_bring_your_coffee_in_no_time">Iti aducem cafeaua cat ai clipi!</string>
     <string name="order_for">Comanda pentru:</string>
     <string name="just_tell_us_what_you_would_like_to_order">Doar spune ce vrei sa iti aducem:</string>
