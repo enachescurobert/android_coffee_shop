@@ -1,16 +1,26 @@
 package com.robert.enachescurobert.robucoffeeshop.ui;
 
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.robert.enachescurobert.robucoffeeshop.R;
+import com.robert.enachescurobert.robucoffeeshop.models.Order;
 
 import java.text.NumberFormat;
 
@@ -42,6 +52,9 @@ public class MainActivity extends AppCompatActivity {
     Button decrementKitKatCoffeeBtn;
     Button decrementToppingCoffeeBtn;
 
+    private static final String TAG = "MainActivity";
+    public static final String FIREBASE_ORDERS_REFERENCE = "orders";
+    
     private int numberOfSimpleCoffees = 0;
     private int numberOfOreoCoffees = 0;
     private int numberOfKitKatCoffees = 0;
@@ -49,10 +62,15 @@ public class MainActivity extends AppCompatActivity {
 
     View.OnClickListener amountOfCoffeesCallback;
 
+    // Write a message to the database
+    private DatabaseReference mDatabase;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mDatabase = FirebaseDatabase.getInstance().getReference();
 
         //initializing views with activity_main.xml
         customerName = findViewById(R.id.customerName);
@@ -141,13 +159,7 @@ public class MainActivity extends AppCompatActivity {
 
                 displayPrice();
 
-                String subject = customerName.getText().toString().equals("") ?
-                        getResources().getString(R.string.order) :
-                        getResources().getString(R.string.order_of) +
-                                customerName.getText().toString().trim();
-                String message = mPriceTextView.getText().toString().trim();
-
-                sendEmail(subject, message);
+                showOrderToBeSentAlert();
             }
         });
     }
@@ -263,6 +275,86 @@ public class MainActivity extends AppCompatActivity {
             viable = false;
         }
         return !viable;
+    }
+
+    private void writeNewOrderToFirebase() {
+        Order order = new Order(customerName.getText().toString(),
+                address.getText().toString(),
+                numberOfSimpleCoffees,
+                numberOfOreoCoffees,
+                numberOfKitKatCoffees,
+                numberOfToppingCoffees
+        );
+
+        String key = mDatabase.getDatabase().getReference(FIREBASE_ORDERS_REFERENCE).push().getKey();
+
+        if (key != null) {
+            mDatabase.child(FIREBASE_ORDERS_REFERENCE).child(key).setValue(order)
+                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+                            Log.d(TAG, "onSuccess: It worked!");
+                            showSendEmailAlert("Request done.", "Do you want to send us an email too?");
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Log.d(TAG, "onSuccess: It failed! Error: " + e.getLocalizedMessage());
+                            showSendEmailAlert("Request failed.", "Do you want to send us your order by email instead?");
+                        }
+                    });
+        }
+    }
+
+    public void showOrderToBeSentAlert(){
+        AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
+        alertDialog.setTitle("One more step: ");
+        alertDialog.setMessage("Complete the order?");
+        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Yes",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        writeNewOrderToFirebase();
+                        dialog.dismiss();
+                    }
+                });
+        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "No",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+
+        alertDialog.show();
+    }
+
+    public void showSendEmailAlert(String title, String message) {
+        AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
+        alertDialog.setTitle(title);
+        alertDialog.setMessage(message);
+        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Yes",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        String subject = customerName.getText().toString().equals("") ?
+                                getResources().getString(R.string.order) :
+                                getResources().getString(R.string.order_of) +
+                                        customerName.getText().toString().trim();
+                        String message = mPriceTextView.getText().toString().trim();
+
+                        sendEmail(subject, message);
+
+                        dialog.dismiss();
+                    }
+                });
+        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "No",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+
+        alertDialog.show();
     }
 
 }
