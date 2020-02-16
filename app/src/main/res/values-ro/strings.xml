@@ -4,11 +4,10 @@
     <string name="make_bill">Nota de plata</string>
     <string name="_0">0 RON</string>
     <string name="total">Total:</string>
-    <string name="simple_coffee_3">Cafea simpla: (3 RON)</string>
-    <string name="both_toppings_5">Ambele topping-uri: (4 RON)</string>
-    <string name="kit_kat_4">Kit Kat: (4 RON)</string>
-    <string name="oreo_4">Oreo: (5 RON)</string>
-    <string name="coffee_with_toppings">Cafea cu topping-uri:</string>
+    <string name="simple_coffee_3">Cafea simpla (3 RON)</string>
+    <string name="coffee_with_oreo_4">Cafea cu Oreo ($4)</string>
+    <string name="coffee_with_kitkat_4">Cafea cu KitKat ($4)</string>
+    <string name="coffee_with_toppings">Cafea cu ambele topping-uri:</string>
     <string name="enter_name_here">Introdu numele aici</string>
     <string name="enter_address_here">Introdu adresa aici</string>
     <string name="intent_title">Alege o aplicatie de Email</string>
@@ -48,5 +47,6 @@
     <string name="add_coffee">Trebuie sa adaugi macar o cafea ca sa efectuezi comanda.</string>
     <string name="add_name">Trebuie sa adaugi numele ca sa efectuezi comanda.</string>
     <string name="add_address">Trebuie sa adaugi adresa ca sa efectuezi comanda.</string>
+
 
 </resources>

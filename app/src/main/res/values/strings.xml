@@ -4,11 +4,10 @@
     <string name="make_bill">Make Bill</string>
     <string name="_0">$0</string>
     <string name="total">Total:</string>
-    <string name="simple_coffee_3">Simple Coffee: ($3)</string>
-    <string name="both_toppings_5">Both Toppings: ($5)</string>
-    <string name="kit_kat_4">Kit Kat: ($4)</string>
-    <string name="oreo_4">Oreo: ($4)</string>
-    <string name="coffee_with_toppings">Coffee With Toppings:</string>
+    <string name="simple_coffee_3">Simple Coffee ($3)</string>
+    <string name="coffee_with_oreo_4">Coffee with Oreo ($4)</string>
+    <string name="coffee_with_kitkat_4">Coffee with KitKat ($4)</string>
+    <string name="coffee_with_toppings">Coffee With Both Toppings: ($5)</string>
     <string name="enter_name_here">Enter name here</string>
     <string name="intent_title">Choose an Email Client</string>
     <string name="over_15">Sorry, but you can\'t order more than 15 coffees for now! :(</string>
@@ -49,4 +48,5 @@
     <string name="add_address">You must tell us your address to order.</string>
     <string name="add_name">You must tell us your name to order.</string>
     <string name="add_coffee">You must add at least one coffee to order.</string>
+
 </resources>

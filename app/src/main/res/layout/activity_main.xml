@@ -128,19 +128,10 @@
             android:id="@+id/extraToppings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/coffee_with_toppings"
+            android:text="@string/coffee_with_oreo_4"
             android:textAllCaps="true"
             android:textColor="#795548"
             android:textSize="25sp"
-            android:paddingBottom="20dp"/>
-
-        <TextView
-            android:id="@+id/oreo_text_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/oreo_4"
-            android:textAllCaps="true"
-            android:textSize="20sp"
             android:paddingBottom="20dp"/>
 
         <LinearLayout
@@ -211,12 +202,12 @@
             android:background="@android:color/darker_gray"/>
 
         <TextView
-            android:id="@+id/kit_kat_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/kit_kat_4"
+            android:text="@string/coffee_with_kitkat_4"
             android:textAllCaps="true"
-            android:textSize="19sp"
+            android:textColor="#795548"
+            android:textSize="25sp"
             android:paddingBottom="20dp"/>
 
 
@@ -288,12 +279,12 @@
 
 
         <TextView
-            android:id="@+id/both_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/both_toppings_5"
+            android:text="@string/coffee_with_toppings"
             android:textAllCaps="true"
-            android:textSize="19sp"
+            android:textColor="#795548"
+            android:textSize="25sp"
             android:paddingBottom="20dp"/>
 
         <LinearLayout
