@@ -37,5 +37,16 @@
     <string name="order_for">Comanda pentru:</string>
     <string name="just_tell_us_what_you_would_like_to_order">Doar spune ce vrei sa iti aducem:</string>
     <string name="deliver_at_address">Comanda o sa fie livrata la :</string>
+    <string name="no_text">Nu</string>
+    <string name="confirm_text">Da</string>
+    <string name="request_done">Cerere efectuată.</string>
+    <string name="request_failed">Cerere eșuată!</string>
+    <string name="email_too">Vrei sa ne trimiti cererea de comanda si pe email?</string>
+    <string name="email_instead">Vrei sa ne trimiti cererea de comanda pe email?</string>
+    <string name="one_more_step">Inca un pas:</string>
+    <string name="complete_the_order">Esti sigur ca vrei sa efectuezi cererea de comanda?</string>
+    <string name="add_coffee">Trebuie sa adaugi macar o cafea ca sa efectuezi comanda.</string>
+    <string name="add_name">Trebuie sa adaugi numele ca sa efectuezi comanda.</string>
+    <string name="add_address">Trebuie sa adaugi adresa ca sa efectuezi comanda.</string>
 
 </resources>

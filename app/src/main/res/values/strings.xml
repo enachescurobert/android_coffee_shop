@@ -38,4 +38,15 @@
     <string name="order_for">Order for:</string>
     <string name="just_tell_us_what_you_would_like_to_order">Just tell us what you would like to order:</string>
     <string name="deliver_at_address">Order will be delivered at address:</string>
+    <string name="no_text">No</string>
+    <string name="confirm_text">Yes</string>
+    <string name="request_done">Request done.</string>
+    <string name="request_failed">Request failed.</string>
+    <string name="email_too">Do you want to send us your order by email too?</string>
+    <string name="email_instead">Do you want to send us your order by email instead?</string>
+    <string name="one_more_step">One more step:</string>
+    <string name="complete_the_order">Complete the order?</string>
+    <string name="add_address">You must tell us your address to order.</string>
+    <string name="add_name">You must tell us your name to order.</string>
+    <string name="add_coffee">You must add at least one coffee to order.</string>
 </resources>
