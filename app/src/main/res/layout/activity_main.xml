@@ -68,17 +68,17 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-
                 <Button
-                    android:id="@+id/decrementSimpleCoffeeBtn"
+                    android:id="@+id/incrementSimpleCoffeeBtn"
                     style="@style/ButtonStyle"
-                    android:text="-"
+                    android:text="+"
+                    android:textSize="50sp"
                     tools:ignore="HardcodedText,NestedWeights"
                     android:layout_weight="1"
-                    android:textSize="50sp"
                     android:layout_height="0dp"
                     android:layout_width="wrap_content"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    android:background="?android:attr/selectableItemBackground" />
 
                 <TextView
                     android:id="@+id/simpleTotal"
@@ -92,15 +92,19 @@
                     android:gravity="center"/>
 
                 <Button
-                    android:id="@+id/incrementSimpleCoffeeBtn"
+                    android:id="@+id/decrementSimpleCoffeeBtn"
                     style="@style/ButtonStyle"
-                    android:text="+"
-                    android:textSize="50sp"
-                    tools:ignore="HardcodedText"
+                    android:text="-"
+                    tools:ignore="HardcodedText,NestedWeights"
                     android:layout_weight="1"
+                    android:textSize="50sp"
                     android:layout_height="0dp"
                     android:layout_width="wrap_content"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    android:background="?android:attr/selectableItemBackground"
+                    />
+
+
 
             </LinearLayout>
 
@@ -151,17 +155,17 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-
                 <Button
-                    android:id="@+id/decrementOreoCoffeeBtn"
+                    android:id="@+id/incrementOreoCoffeeBtn"
                     style="@style/ButtonStyle"
-                    android:text="-"
+                    android:text="+"
+                    android:textSize="50sp"
                     tools:ignore="HardcodedText,NestedWeights"
                     android:layout_weight="1"
-                    android:textSize="50sp"
                     android:layout_height="0dp"
                     android:layout_width="wrap_content"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    android:background="?android:attr/selectableItemBackground"/>
 
                 <TextView
                     android:id="@+id/oreoTotal"
@@ -175,15 +179,18 @@
                     android:gravity="center"/>
 
                 <Button
-                    android:id="@+id/incrementOreoCoffeeBtn"
+                    android:id="@+id/decrementOreoCoffeeBtn"
                     style="@style/ButtonStyle"
-                    android:text="+"
-                    android:textSize="50sp"
-                    tools:ignore="HardcodedText"
+                    android:text="-"
+                    tools:ignore="HardcodedText,NestedWeights"
                     android:layout_weight="1"
+                    android:textSize="50sp"
                     android:layout_height="0dp"
                     android:layout_width="wrap_content"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    android:background="?android:attr/selectableItemBackground"/>
+
+
 
             </LinearLayout>
 
@@ -225,17 +232,17 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-
                 <Button
-                    android:id="@+id/decrementKitKatCoffeeBtn"
+                    android:id="@+id/incrementKitKatCoffeeBtn"
                     style="@style/ButtonStyle"
-                    android:text="-"
+                    android:text="+"
+                    android:textSize="50sp"
                     tools:ignore="HardcodedText,NestedWeights"
                     android:layout_weight="1"
-                    android:textSize="50sp"
                     android:layout_height="0dp"
                     android:layout_width="wrap_content"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    android:background="?android:attr/selectableItemBackground"/>
 
                 <TextView
                     android:id="@+id/kitKatTotal"
@@ -249,15 +256,16 @@
                     android:gravity="center"/>
 
                 <Button
-                    android:id="@+id/incrementKitKatCoffeeBtn"
+                    android:id="@+id/decrementKitKatCoffeeBtn"
                     style="@style/ButtonStyle"
-                    android:text="+"
-                    android:textSize="50sp"
-                    tools:ignore="HardcodedText"
+                    android:text="-"
+                    tools:ignore="HardcodedText,NestedWeights"
                     android:layout_weight="1"
+                    android:textSize="50sp"
                     android:layout_height="0dp"
                     android:layout_width="wrap_content"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    android:background="?android:attr/selectableItemBackground"/>
 
             </LinearLayout>
 
@@ -300,17 +308,17 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-
                 <Button
-                    android:id="@+id/decrementToppingCoffeeBtn"
+                    android:id="@+id/incrementToppingCoffeeBtn"
                     style="@style/ButtonStyle"
-                    android:text="-"
+                    android:text="+"
+                    android:textSize="50sp"
                     tools:ignore="HardcodedText,NestedWeights"
                     android:layout_weight="1"
-                    android:textSize="50sp"
                     android:layout_height="0dp"
                     android:layout_width="wrap_content"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    android:background="?android:attr/selectableItemBackground"/>
 
                 <TextView
                     android:id="@+id/toppingTotal"
@@ -324,15 +332,18 @@
                     android:gravity="center"/>
 
                 <Button
-                    android:id="@+id/incrementToppingCoffeeBtn"
+                    android:id="@+id/decrementToppingCoffeeBtn"
                     style="@style/ButtonStyle"
-                    android:text="+"
-                    android:textSize="50sp"
-                    tools:ignore="HardcodedText"
+                    android:text="-"
+                    tools:ignore="HardcodedText,NestedWeights"
                     android:layout_weight="1"
+                    android:textSize="50sp"
                     android:layout_height="0dp"
                     android:layout_width="wrap_content"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    android:background="?android:attr/selectableItemBackground"/>
+
+
 
             </LinearLayout>
 

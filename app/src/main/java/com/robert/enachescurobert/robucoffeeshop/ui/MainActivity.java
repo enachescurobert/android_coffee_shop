@@ -178,8 +178,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
             if (currentValue > 0) {
                 return --currentValue;
-            } else {
-                Toast.makeText(getApplicationContext(), R.string.under_0, Toast.LENGTH_SHORT).show();
             }
         }
         return currentValue;
